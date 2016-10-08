@@ -9,15 +9,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<base href="<%= basePath%>"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Insert title here</title>
-<!-- 		<script type="text/JavaScript" src="resources\ckeditor\ckeditor.js"></script> -->
+<!-- 		<script type="text/JavaScript" src="resources/ckeditor/ckeditor.js"></script> -->
 		<script src="//cdn.ckeditor.com/4.5.11/full/ckeditor.js"></script>
 <!-- 		<script src="//cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script> -->
+		<style type="text/css">
+			.main-body{
+				width:80%;
+				margin:0px auto;
+			}
+			.input-text{
+				margin-left:10px;
+				border-radius:5px;
+			}
+		</style>
 	</head>
 	<body>
-		<form action="">
-			文章标题<input type="text">
-			
-			<textarea id="TextArea1" cols="20" rows="2" class="ckeditor"></textarea>
-		</form>
+		<div class="main-body">
+			<form action="saveArticle" method="post">
+				<p>文章标题<input type="text" name="title" class="input-text"></p>
+				<p>作&nbsp;&nbsp;者<input type="text" name="author" class="input-text"></p>
+				<p>关 键 字<input type="text" name="keywords" class="input-text"></p>
+				<p>文章内容</p>
+				<textarea id="TextArea1" cols="20" rows="2" class="ckeditor" name="content"></textarea>
+				<input type="submit" value="提交">
+			</form>
+		</div>
 	</body>
 </html>

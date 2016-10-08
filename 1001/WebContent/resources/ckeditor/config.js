@@ -17,7 +17,7 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// 编辑器样式，有三种：'kama'（默认）、'office2003'、'v2'
 	// config.skin = 'v2';
-
+	config.image_previewText=' '//预览区域显示内容
 	// 背景颜色
 	config.uiColor = '#EEDDEE';
 	
@@ -48,4 +48,6 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+	
+	config.filebrowserImageUploadUrl="upload";
 };
